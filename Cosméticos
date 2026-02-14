@@ -1,0 +1,113 @@
+index.html <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abia Cosméticos</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    margin:0;
+    background:#fff5f8;
+}
+
+header{
+    background:#d63384;
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+
+.produtos{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    padding:20px;
+    gap:20px;
+}
+
+.card{
+    background:white;
+    border-radius:10px;
+    padding:15px;
+    width:220px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.1);
+    text-align:center;
+}
+
+.card img{
+    width:100%;
+    border-radius:10px;
+}
+
+button{
+    background:#d63384;
+    color:white;
+    border:none;
+    padding:10px;
+    margin-top:10px;
+    cursor:pointer;
+    border-radius:6px;
+}
+
+button:hover{
+    background:#b0256b;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    background:#f8d7e5;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>🌸 Abia Cosméticos</h1>
+<p>Compre online e retire na loja</p>
+</header>
+
+<section class="produtos">
+
+<div class="card">
+<img src="https://via.placeholder.com/200x200">
+<h3>Batom Matte</h3>
+<p>R$ 29,90</p>
+<button onclick="comprar('Batom Matte - R$29,90')">Comprar</button>
+</div>
+
+<div class="card">
+<img src="https://via.placeholder.com/200x200">
+<h3>Base Líquida</h3>
+<p>R$ 59,90</p>
+<button onclick="comprar('Base Líquida - R$59,90')">Comprar</button>
+</div>
+
+<div class="card">
+<img src="https://via.placeholder.com/200x200">
+<h3>Perfume Floral</h3>
+<p>R$ 89,90</p>
+<button onclick="comprar('Perfume Floral - R$89,90')">Comprar</button>
+</div>
+
+</section>
+
+<footer>
+<p>📍 Retirada na loja física</p>
+<p>Seu endereço aqui</p>
+</footer>
+
+<script>
+function comprar(produto){
+    let numero = "5599999999999"; // coloque seu WhatsApp
+    let mensagem = `Olá! Quero comprar ${produto} e retirar na loja.`;
+    let url = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
+    window.open(url, '_blank');
+}
+</script>
+
+</body>
+</html>
